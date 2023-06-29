@@ -29,12 +29,9 @@ public class APIClient
         CertificatePinner certificatePinner = new CertificatePinner.Builder()
                 .add("domain", "sha256/8+PR0N")
                 .build();
-
 //        CertificatePinner certificatePinner = new CertificatePinner.Builder()
 //                .add("eservices-test.nsdl.com", "sha256/980Ionqp3wkYtN9SZVgMzuWQzJta1nfxNPwTem1X0uc=")
 //                .build();
-
-
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .certificatePinner(certificatePinner)
                 .readTimeout(60, TimeUnit.SECONDS)
