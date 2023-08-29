@@ -8,14 +8,15 @@ public class Constants
     public final static String PACKAGE_NAME = "com.niramaya.niramaya_app";
     public static final String CAMERA_FILE_PROVIDER = "com.niramaya.niramaya_app.fileprovider";
 
-    public static String sVersionCode = "0";
+)
 
-    public static void SOUT(String sText)
-    {
+    {    public static String sVersionCode = "0";
 
-        if (BuildConfig.DEBUG)
-        {
+        if (BuildConfig.DEBUG
             System.out.println(""+sText);
+
+            public static void SOUT(String sText)
+            {
         }
     }
     public static String getTDT()
@@ -24,7 +25,6 @@ public class Constants
         long date = System.currentTimeMillis();
         return  ""+sCurrDate.format(date);
     }
-
     public static String getTodayDateTimeFormat()
     {
         SimpleDateFormat sCurrDate = new SimpleDateFormat("dd MMM yyyy HH:mm");
