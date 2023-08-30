@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Niramaya_app</string>
     <string name="this_is_sample_text">This is Sample text</string>
+    <string name="hint_ph">Enter your Phone No.</string>
+    <string name="hint_otp">Enter your OTP</string>
+
 </resources>

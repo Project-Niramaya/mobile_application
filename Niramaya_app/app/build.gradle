@@ -52,6 +52,7 @@ android {
             archivesBaseName = "Niramaya_${defaultConfig.versionName}_${defaultConfig.versionCode}"+buildTime()
         }
     }
+    buildToolsVersion '33.0.2'
     applicationVariants.all { variant ->
         println 'Iterating variant: ' + variant.getName()
     }
