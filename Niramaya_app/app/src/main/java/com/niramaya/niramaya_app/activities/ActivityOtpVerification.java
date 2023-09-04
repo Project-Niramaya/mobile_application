@@ -30,7 +30,7 @@ public class ActivityOtpVerification extends BaseActivity {
     public Button sendOtp;
     public Button verifyOtp;
     public String otp;
-    private String phoneNumber;
+    public String phoneNumber;
     private String gatewayNumber;
     private String apiKey;
     private String message;

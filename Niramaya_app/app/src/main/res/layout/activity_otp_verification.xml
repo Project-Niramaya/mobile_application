@@ -36,7 +36,7 @@
         android:backgroundTint="#C3DCD9"
         android:text="Send OTP"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="24dp"
         android:textStyle="bold" />
 
     <Button
