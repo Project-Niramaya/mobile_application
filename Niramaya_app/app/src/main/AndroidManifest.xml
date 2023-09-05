@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Niramaya_app"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ActivityScanner"
+            android:exported="false" />
+        <activity
             android:name=".activities.ActivityOtpVerification"
             android:exported="true">
             <intent-filter>
