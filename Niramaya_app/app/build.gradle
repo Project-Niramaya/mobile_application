@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 plugins {
     id 'com.android.application'
 }
@@ -5,7 +7,7 @@ plugins {
 android {
     namespace 'com.niramaya.niramaya_app'
     compileSdk 33
-
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.niramaya.niramaya_app"
         minSdk 22
@@ -18,7 +20,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -26,8 +32,34 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+        buildConfig = true
+    }
+    def flavourDimentionStr = "buildType"
+    flavorDimensions flavourDimentionStr
+    productFlavors {
+        uat {
+            dimension flavourDimentionStr
+            buildConfigField "boolean", "LOGGER", "true"
+            buildConfigField "String", "API_BASE", "\"http://xyz.com:8084/MobApiUAT/api/\""
+            archivesBaseName = "Niramaya_${defaultConfig.versionName}_${defaultConfig.versionCode}"+buildTime()
+        }
+        live {
+            dimension flavourDimentionStr
+            buildConfigField "boolean", "LOGGER", "false"
+            buildConfigField "String", "API_BASE", "\"http://xyz.com:8084/MobApi/api/\""
+            archivesBaseName = "Niramaya_${defaultConfig.versionName}_${defaultConfig.versionCode}"+buildTime()
+        }
+    }
+    applicationVariants.all { variant ->
+        println 'Iterating variant: ' + variant.getName()
+    }
 }
-
+def buildTime() {
+    def df = new SimpleDateFormat("_yyyyMMddHHmm")
+    return df.format(new Date())
+}
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -36,4 +68,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
 }
