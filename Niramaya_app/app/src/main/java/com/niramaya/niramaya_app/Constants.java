@@ -12,6 +12,7 @@ public class Constants
     public static final int PAGE_SPLASH_SCREEN = 1;
     public static final int PAGE_LOGIN = 2;
     public static final int PAGE_OTP = 3;
+    public static final int PAGE_SCANNER = 4;
 
 
     public static void SOUT(String sText)

@@ -3,5 +3,14 @@
     <string name="this_is_sample_text">This is Sample text</string>
     <string name="hint_ph">Enter your Phone No.</string>
     <string name="hint_otp">Enter your OTP</string>
+    <string name="network_is_unreachable_">Network is unreachable</string>
+    <string name="loading___">Loading ...</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="home">Home</string>
+    <string name="Login">Login</string>
+    <string name="go_to_login">Go to Login</string>
+    <string name="ok">Ok</string>
+    <string name="hello_test_toast">Hello Test Toast</string>
+    <string name="toast">Toast</string>
 
 </resources>

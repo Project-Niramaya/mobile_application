@@ -12,7 +12,7 @@ import com.niramaya.niramaya_app.R;
 import java.io.IOException;
 import okhttp3.*;
 
-public class ActivityOtpVerification extends BaseActivity {
+public class ActivityOtpVerification extends ActivityBase {
 
     private static final String API_URL = "YOUR_SMS_GATEWAY_API_URL";
     private static final String API_KEY = "YOUR_SMS_GATEWAY_API_KEY";
@@ -132,14 +132,6 @@ public class ActivityOtpVerification extends BaseActivity {
 
 
 
-    private void showToast(final String message) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(ActivityOtpVerification.this, message, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
     private boolean sendSMS(String phoneNumber, String gatewayNumber, String apiKey, String message) {
         this.phoneNumber = phoneNumber;

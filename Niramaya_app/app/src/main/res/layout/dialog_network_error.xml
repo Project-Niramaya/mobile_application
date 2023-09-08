@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/custom_toast_layout"
+    android:background="@drawable/back_network_error"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/net_error"/>
+    <TextView
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:id="@+id/tvToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="" />
+    <com.niramaya.niramaya_app.customview.Button_custom
+        android:ems="6"
+        android:padding="5dp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/color5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btOk"
+        android:text="@string/ok"/>
+
+</LinearLayout>

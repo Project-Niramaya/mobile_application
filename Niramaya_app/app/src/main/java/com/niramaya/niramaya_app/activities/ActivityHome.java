@@ -6,12 +6,14 @@ import androidx.annotation.Nullable;
 
 import com.niramaya.niramaya_app.R;
 
-public class ActivitySplashScreen extends BaseActivity
+public class ActivityHome extends ActivityBase
 {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_home);
     }
+
+
 }
