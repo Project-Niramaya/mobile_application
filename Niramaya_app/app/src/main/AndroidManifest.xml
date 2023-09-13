@@ -16,26 +16,27 @@
         android:theme="@style/Theme.Niramaya_app"
         tools:targetApi="31">
         <activity
+            android:name=".fragments.FragmentScanning"
+            android:exported="false" />
+        <activity
             android:name=".activities.ActivityOtpVerification"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activities.ActivityLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activities.ActivityHome"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-
-
     </application>
 
 </manifest>
