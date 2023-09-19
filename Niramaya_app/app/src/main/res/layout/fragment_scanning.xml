@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.niramaya.niramaya_app.customview.TextView_custom
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/qr_code_scanner"/>
+    <com.niramaya.niramaya_app.customview.Button_custom
+        android:layout_marginTop="40dp"
+        android:id="@+id/btScan"
+        android:text="@string/scan_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.niramaya.niramaya_app.customview.TextView_custom
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_of_scanning"/>
+        <com.niramaya.niramaya_app.customview.TextView_custom
+            android:id="@+id/tvResult"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

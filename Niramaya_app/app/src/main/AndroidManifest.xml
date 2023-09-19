@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="true"/>
 
     <application
         android:name=".ApplicationClass"
@@ -16,9 +23,6 @@
         android:theme="@style/Theme.Niramaya_app"
         tools:targetApi="31">
         <activity
-            android:name=".fragments.FragmentScanning"
-            android:exported="false" />
-        <activity
             android:name=".activities.ActivityOtpVerification"
             android:exported="true"></activity>
         <activity
@@ -31,9 +35,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.Activity_CapturePortrait"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:exported="true"/>
+        <activity
             android:name=".activities.ActivityHome"
             android:exported="false"></activity>
-
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
