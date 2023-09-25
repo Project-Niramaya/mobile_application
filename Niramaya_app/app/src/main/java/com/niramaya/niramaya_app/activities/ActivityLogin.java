@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentManager;
 
 import com.niramaya.niramaya_app.Constants;
 import com.niramaya.niramaya_app.R;
-import com.niramaya.niramaya_app.fragments.BaseFragment;
 import com.niramaya.niramaya_app.fragments.FragmentLogin;
+import com.niramaya.niramaya_app.fragments.FragmentScanning;
 import com.niramaya.niramaya_app.fragments.FragmentSplashScreen;
 
 public class ActivityLogin extends ActivityBase
@@ -24,7 +24,7 @@ public class ActivityLogin extends ActivityBase
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         sharedPref = getSharedPreferences(Constants.PACKAGE_NAME, Context.MODE_PRIVATE);
-        showFragment(Constants.PAGE_SPLASH_SCREEN);
+        showFragment(Constants.PAGE_SCANNING);
     }
     public void reloadFragment(int position)
     {
@@ -51,6 +51,9 @@ public class ActivityLogin extends ActivityBase
                 break;
             case Constants.PAGE_LOGIN:
                 fragment = new FragmentLogin();
+                break;
+            case Constants.PAGE_SCANNING:
+                fragment = new FragmentScanning();
                 break;
         }
         if (fragment != null)

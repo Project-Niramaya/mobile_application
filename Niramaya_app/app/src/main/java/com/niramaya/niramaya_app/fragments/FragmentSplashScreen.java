@@ -2,6 +2,7 @@ package com.niramaya.niramaya_app.fragments;
 
 
 import static com.niramaya.niramaya_app.Constants.PAGE_LOGIN;
+import static com.niramaya.niramaya_app.Constants.PAGE_SCANNING;
 
 import android.content.Context;
 import android.content.Intent;
@@ -37,7 +38,13 @@ public class FragmentSplashScreen extends BaseFragment
                 ((ActivityLogin)getActivity()).showFragment(PAGE_LOGIN);
             }
         });
-
+        Button_custom btScan = (Button_custom) rootView.findViewById(R.id.btScan);
+        btScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((ActivityLogin)getActivity()).showFragment(PAGE_SCANNING);
+            }
+        });
 
         return rootView;
     }
