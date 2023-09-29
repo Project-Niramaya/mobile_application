@@ -11,7 +11,9 @@ import androidx.fragment.app.FragmentManager;
 import com.niramaya.niramaya_app.Constants;
 import com.niramaya.niramaya_app.R;
 import com.niramaya.niramaya_app.fragments.FragmentLogin;
+import com.niramaya.niramaya_app.fragments.FragmentOtpVerification;
 import com.niramaya.niramaya_app.fragments.FragmentScanning;
+import com.niramaya.niramaya_app.fragments.FragmentSms;
 import com.niramaya.niramaya_app.fragments.FragmentSplashScreen;
 
 public class ActivityLogin extends ActivityBase
@@ -54,6 +56,12 @@ public class ActivityLogin extends ActivityBase
                 break;
             case Constants.PAGE_SCANNING:
                 fragment = new FragmentScanning();
+                break;
+            case Constants.PAGE_OTP_VERIFICATION:
+                fragment = new FragmentOtpVerification();
+                break;
+            case Constants.PAGE_SMS:
+                fragment = new FragmentSms();
                 break;
         }
         if (fragment != null)

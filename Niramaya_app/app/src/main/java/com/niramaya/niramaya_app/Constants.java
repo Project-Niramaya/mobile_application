@@ -11,8 +11,10 @@ public class Constants
     public static String sVersionCode = "0";
     public static final int PAGE_SPLASH_SCREEN = 1;
     public static final int PAGE_LOGIN = 2;
-    public static final int PAGE_OTP = 3;
+    public static final int PAGE_OTP_VERIFICATION = 3;
     public static final int PAGE_SCANNING = 4;
+
+    public static final int PAGE_SMS = 5;
 
 
     public static void SOUT(String sText)

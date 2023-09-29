@@ -3,6 +3,7 @@ package com.niramaya.niramaya_app.fragments;
 
 import static com.niramaya.niramaya_app.Constants.PAGE_LOGIN;
 import static com.niramaya.niramaya_app.Constants.PAGE_SCANNING;
+import static com.niramaya.niramaya_app.Constants.PAGE_SMS;
 
 import android.content.Context;
 import android.content.Intent;
@@ -42,7 +43,7 @@ public class FragmentSplashScreen extends BaseFragment
         btScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ActivityLogin)getActivity()).showFragment(PAGE_SCANNING);
+                ((ActivityLogin)getActivity()).showFragment(PAGE_SMS);
             }
         });
 
